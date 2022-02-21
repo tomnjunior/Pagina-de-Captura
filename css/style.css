@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+header{
+    background-color: #48C5CE;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.title{
+    font-size: 26px;
+
+}
+
+section{
+    padding: 20px;
+    background-image: url('../images/people.jpg');
+    background-size: cover; /* O background-size cover é usado para a imagem ficar do tamanho do espaço que ela necessita cobrir. Se o float tipo right da class formContainer estiver ativo, todas as configurações de imagem que estão sendo feitas aqui no section não serão visualilzadas no navegador de testes enquanto não definir aqui no section da imgaem o overflow como hidden. */
+    overflow: hidden; /* O overflow hidden faz com que a nossa imagem preencha todo o espaço que ela tem para preencher. */
+
+}
+
+.formContainer{
+    max-width: 230px;
+    background-color: #ffffffBB;
+    padding: 20px;
+    float: right;
+}
+
+h2{
+    font-size: 16px;
+}
+
+.marginbottom{
+    margin-bottom: 15px;
+}
+
+input, select{
+    width: 100%;
+    box-sizing: border-box; /* Box-sizing: border-box, foi usado para alinhar as caixas de input e select.*/
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    color: white;
+    background-color: #48C5CE;
+    font-weight: bold;
+}
+
+select{
+    /* Cada navegador mostrará a setinha do select diferente. Aqui estamos alterando isso e inserindo uma imagem da seta como padrão. */
+
+    /* Temos que deixar a "appearance" como "none" em todos os tipos navegadores, pois nem todos suportam esse tipo de modificação como padrão, por isso utilizamos as três opções de appearance abaixo. Cada uma é para um tipo de navegador diferente. */
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-image: url('../images/arrow.jpg');
+    background-repeat: no-repeat;
+    
+    /* Aqui definimos as posições da imagem seta dentro do select. */
+    background-position: calc(100% - 10px) center;
+    /* O que foi descrito acima também pode ser descrito assim:
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;*/
+}
+
+footer{
+    background-color: #202121;
+    padding: 40px;
+    text-align: center;
+}
+
+.picture{
+    width: 160px;
+}
+
+.description{
+    display: inline-block;
+    text-align: left; /* Como o "text-align" do "footer" foi colocado como "center", o texto aqui ficará todo centralizado. Inserimos o "Left" aqui nesse "Text-Align" para forçar o texto a ficar alinhado a esquerda. */
+    color: #ffffff;
+    max-width: 40%;
+    margin-left: 40px;
+}
+
+.description p, .description h3{
+    margin-bottom: 20px;
+}
+
+.description h3{
+    font-size: 24px;
+}
+
+@media screen and (max-width: 700px) {
+    .formContainer{
+        margin: auto;
+        float: none;
+        max-width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .formContainer{
+        max-width: 100%;
+    }
+    
+}
